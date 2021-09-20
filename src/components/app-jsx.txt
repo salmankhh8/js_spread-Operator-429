@@ -1,0 +1,17 @@
+unction handleChange(event) {
+    const { name, value } = event.target;
+
+    setContact((prevValue) => ({ ...prevValue, [name]: value }));
+  }// code make smore cofusing while thjere are lots of brackets and curly brraces
+
+  ///////////////////////////////////////////
+   function handleChange(event) {
+    const { name, value } = event.target;
+
+    setContact((prevValue) => {// this is undersataing beacuse ita looks more sipmliffied
+      return {
+        ...prevValue,
+        [name]: value
+      };
+    });
+  }
